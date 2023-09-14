@@ -4,13 +4,17 @@ import { Route, RouterProvider, Routes, createBrowserRouter } from 'react-router
 import './App.css';
 import PaginaInicial from './screens/PaginaInicial';
 import PaginaContato from './screens/PaginaContato';
+import ErrorPage from './screens/ErrorPage';
 
 // create the router
 const router = createBrowserRouter(
   [
     {
       path: "*",
-      Component: RootNavigation
+      // element: <RootNavigation />,
+      Component: RootNavigation,
+      // errorElement: <ErrorPage />,
+      ErrorPage: ErrorPage,
     }
   ]
 )
